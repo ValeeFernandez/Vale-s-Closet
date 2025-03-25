@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", serif;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+}
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+.header {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    background-color: #DCD2CC;
+    min-height: 70vh;
+    padding: 100px 0;
+    text-align: center; /* Asegura que el texto esté bien alineado */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Asegura que la imagen y el texto estén alineados */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 40px; /* Espacio entre la imagen y el texto */
+}
+
+.header img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+.navbar {
+    position: absolute; /* Hace que el navbar se superponga sobre el header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté encima del header */
+    display: flex;
+    justify-content: center; /* Centra el contenido del navbar */
+    padding: 15px 0;
+}
+
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+.navbar ul li a{
+    font-size: 22px;
+    padding: 15px;
+    color: #393F4A;
+    display: block;
+    font-weight: 600;
+}
+.header-txt span{
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #393F4A;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+}
+.header-txt h1{
+    font-size: 80px;
+    line-height: 1;
+    letter-spacing: 5px;
+    color: #181722;
+    margin-bottom: 35px;
+    margin-top: 10px;
+    text-align: left;
+}
+.header-txt p{
+    font-size: 25px;
+    color: #393F4A;
+    margin-bottom: 45px;
+    text-align: left;
+}
+.information{
+    width: 80%;
+    box-shadow: 0 0 10px rgba(1, 19, 39, 0.7);
+    padding: 25px 75px;
+    margin-top: -75px;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+}
+.information-content{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.information-1{
+    padding: 25px;
+}
+.information-1 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.information-1 p{
+    font-size: 20px;
+    color: #181722;
+
+}
+.favorite, .colors{
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Organiza el título arriba y los elementos abajo */
+    align-items: center;
+    gap: 20px; /* Espacio entre el título y las prendas */
+}
+
+.favorite-title, .colors-title {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.favorite-image, .colors-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espaciado entre prendas */
+    
+}
+
+.fav-1 {
+    margin: 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px rgba(138, 120, 117, 0.8);
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    text-align: center;
+    flex-basis: calc(25% - 20px); /* Ajusta el tamaño de cada prenda */
+    padding: 35px;
+}
+
+.fav-1 img{
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    margin-bottom: 30px;
+
+}
+.favorite-title h2{
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: 3px;
+    color: #8A7875;
+    margin-bottom: 35px;
+    margin-top: 10px; 
+}
+.colors{
+    margin: 40px;
+    padding: 40px;
+}
+.colors-title h2{
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: 3px;
+    color: #393F4A;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.colors-1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.colors-container h2{
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: 3px;
+    color: #393F4A;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.garments-container{
+    margin-top: 30px;
+    background-color: #DCD2CC;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Organiza el título arriba y los elementos abajo */
+    align-items: center;
+    gap: 20px; /* Espacio entre el título y las prendas */
+}
+.garments-title{
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 3px;
+    padding: 15px;
+    margin: 15px;
+    color: #393F4A;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+.rights{
+    width: 100%;
+    background-color: #6d605d;
+    justify-content: flex-end;
+    text-align: center;
+    color: #393F4A;
+    padding: 10px;
+}
+.rights a{
+    color: #2b2f36;
+    letter-spacing: 1px;
+}
+.register{
+    border: 0.5px solid #8A7875;
+    border-radius: 25px;
+    padding: 35px;
+}
+.register input{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    border: 0.5px solid #8A7875;
+    border-radius: 20px;
+    padding: 35x;
+    flex-direction: column;
+    background-color: #DCD2CC;
+    padding-left: 20px;
+}
+.input-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 20px 100px; /* Espaciado entre los inputs */
+    width: 80%; /* Ajusta el ancho según necesites */
+    margin: 0 auto; /* Centra el contenedor */
+}
+#garmentImage{
+    padding-top: 10px;
+}
+.button-container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+.button-container button{
+    background-color: #6d605d;
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 10px 25px;
+    border: none;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+#garmentList {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la pantalla */
+    gap: 15px; /* Espaciado entre las tarjetas */
+    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+    padding: 20px;
+}
+
+.garment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    margin-right: 30px;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 20px rgba(138, 120, 117, 0.8);
+    width: 350px; /* Ajusta el ancho de cada tarjeta */
+    text-align: center;
+
+}
+
+.garment-card img {
+    margin: 15px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.garment-card p{
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.edit-btn, .delete-btn {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background-color: #AEAFB1;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #D8C2B5;
+    color: white;
+}
+/*ANIMACIONES*/
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 20s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 20s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+  
+
+  .shadow-drop-2-center {
+	-webkit-animation: shadow-drop-2-center 10s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-2-center 10s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes shadow-drop-2-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translateZ(50px);
+              transform: translateZ(50px);
+      -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  @keyframes shadow-drop-2-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translateZ(50px);
+              transform: translateZ(50px);
+      -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+
+
+
+.footer{
+    background-color: #8A7875;
+    width: 100%;
+    padding-top: 20px;
+
+}
+.footer-content{
+    display: flex; /* Utiliza flexbox para alinear las columnas */
+    justify-content: space-around; /* Espaciado igual entre columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    max-width: 1200px; /* Maximo ancho del footer */
+    margin: 0 auto; /* Centra el contenido del footer */
+    margin-bottom: 30px;
+}
+.link{
+    margin-top: 30px;
+    margin-right: 20px;
+    flex: 3; /* Cada columna ocupará el mismo espacio */
+    text-align: center; /* Centra el texto dentro de las columnas */
+    color: #F4F0F1; /* Color de texto */
+}
+.link h3{
+    color: #393F4A;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.link li{
+    margin-bottom: 15px; /* Espaciado inferior para cada enlace */
+}
+.link a {
+    color: #393F4A;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 10px;
+}
+.link a:hover{
+    color: #181722;
+    letter-spacing: 2px;
+}
+
+/* Para pantallas medianas (tablets, entre 768px y 1024px) */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column; /* Poner texto e imagen en columna */
+        text-align: center;
+    }
+
+    .header img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-container {
+        grid-template-columns: 1fr; /* Hacer los inputs en una sola columna */
+    }
+}
+
+/* Para pantallas pequeñas (celulares, menos de 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header {
+        padding: 50px 0;
+        min-height: auto;
+    }
+
+    .header-txt h1 {
+        font-size: 40px; /* Reducir el tamaño del título */
+        text-align: center;
+    }
+
+    .header-txt p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .information-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .favorite-image,
+    .colors-container {
+        flex-direction: column; /* Hacer que las imágenes se apilen */
+        align-items: center;
+    }
+
+    .fav-1,
+    .colors-1 img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .garments-container {
+        padding: 20px;
+    }
+
+    .register input {
+        width: 100%;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
